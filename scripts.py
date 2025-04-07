@@ -1,7 +1,8 @@
 from File_Organiser import desktop_organiser
+from IP_Geolocator import ip_locator
 from Subnet_Calculator import subnet_calculator
 
-programs_array = ["", "File Organiser", "Subnet Calculator", "Duplicate Checker"]
+programs_array = ["", "File Organiser", "IP Geolocator", "Subnet Calculator", "Duplicate Checker"]
 
 def Logo_Bar():
   _logo = """
