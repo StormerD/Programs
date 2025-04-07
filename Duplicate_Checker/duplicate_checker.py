@@ -1,3 +1,5 @@
+import os
+
 class Line:
   def __init__(self, content, lineNo):
     self.content = content
@@ -75,9 +77,16 @@ def PrintArray(_results):
     i += 1
 
 def main():
+  _input = input("Configure text file? (y/n): ")
+  if _input == "y":
+    _path = os.getcwd()
+    os.startfile(_path)
+    input("Press enter to continue...")
   _inputFile = open("inputFile.txt", "rt")
   _file = ReadFile(_inputFile)
   _results = CompareArray(_file)
   PrintArray(_results)
+  input("Press enter to continue...")
   
-main()
+if __name__ == "__main__":
+  main()

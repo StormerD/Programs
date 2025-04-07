@@ -1,4 +1,7 @@
-import requests
+try:
+  import requests
+except Exception as e:
+  print(f"Error: {e}")
 
 _url="http://ip-api.com/json/"
 
@@ -18,8 +21,13 @@ def Locate(_ip):
     print("Error! Please try again.")
 
 def main():
-  _ip = input("Enter an IP Address to Geolocate: ")
-  Locate(_ip)
+  try:
+    _ip = input("Enter an IP Address to Geolocate: ")
+    Locate(_ip)
+    input("Press enter to continue...")
+
+  except Exception as e:
+    print(f"Error: {e}")
 
 if __name__ == "__main__":
   main()

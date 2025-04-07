@@ -32,6 +32,7 @@ def main():
     print("\nNetwork Information:")
     for key, value in info.items():
       print(f"{key}: {value}")
+    input("Press enter to continue...")
   except ValueError as e:
     print(f"Error: {e}")
     

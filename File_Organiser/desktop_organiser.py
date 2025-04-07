@@ -61,6 +61,8 @@ def main():
 
   # organises files
   Organiser()
+  
+  input("Press enter to continue...")
 
 if __name__ == "__main__":
   main()
