@@ -22,7 +22,7 @@ def Organiser():
     if entry.is_dir():
       continue
     file_path = Path(entry)
-    if str(file_path) == "scripts.lnk":
+    if str(file_path) == "scripts.bat":
       continue
     final_file_format = file_path.suffix.lower()
     if str(final_file_format) == ".code-workspace":
