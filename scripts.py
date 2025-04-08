@@ -29,6 +29,7 @@ def Logo_Bar():
   print(_logo)
   
 def Print_Programs():
+  print("PLEASE SELECT A PROGRAM:")
   i = 1
   while i < len(programs_array):
     print(f"[{str(i)}] {programs_array[i]}")
@@ -36,21 +37,21 @@ def Print_Programs():
   print("[0] Exit")
     
 def Program_Selector():
-  _input = input("Select a program: ")
+  _input = input("-> : ")
   print("- - - - - - - - - -")
   # exits program
   if _input == "0":
     exit()
-  if _input == "1":
+  elif _input == "1":
     duplicate_checker.main()
     main()
-  if _input == "2":
+  elif _input == "2":
     desktop_organiser.main()
     main()
-  if _input == "3":
+  elif _input == "3":
     ip_locator.main()
     main()
-  if _input == "4":
+  elif _input == "4":
     subnet_calculator.main()
     main()
   else:
@@ -63,12 +64,8 @@ def main():
   Program_Selector()
   
 def init():
-  try:
-    
     Logo_Bar()
     main()
-  except Exception as e:
-    print(f"Error: {e}")
   
 if __name__ == "__main__":
   init()
