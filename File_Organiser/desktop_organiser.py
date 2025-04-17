@@ -47,12 +47,7 @@ def Change_Directory():
     os.chdir(r"C:\\Users\D\Desktop")
   elif _input == "l":
     os.chdir(r"C:\\Users\drodw\Desktop")
-  else:
-    print(_input)
-    print(type(_input))
-    if _input == "p": print(True)
-    if _input != "p": print(False)
-    
+  else:  
     print("Please input a correct character")
     Change_Directory()
   

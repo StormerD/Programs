@@ -64,8 +64,8 @@ def main():
   Program_Selector()
   
 def init():
-    Logo_Bar()
-    main()
+  Logo_Bar()
+  main()
   
 if __name__ == "__main__":
   init()
