@@ -1,11 +1,13 @@
 import os
 from pathlib import Path
 
+
 listOfDirectories = {
-  "Shortcuts": [".lnk"],
+  "Shortcuts": [".lnk", ".exe", ".url"],
   "Zips": [".rar", ".zip", ".7z", ".rz", ".gz", ".iso", ".tar", ".dmz"],
-  "PDFs": [".pdf"]
+  "PDFs": [".pdf"],
 }
+
 
 File_Format_Dictionary = {
   final_file_format: directory
@@ -13,9 +15,11 @@ File_Format_Dictionary = {
   for final_file_format in file_format_stored
 }
 
+
 def Organiser():
+  duplicates = []
   try:
-    os.mkdir("organiser")
+    os.makedirs("organiser", exist_ok=True)
   except Exception as e:
     print(f"Failed to create new directory: {e}")
   for entry in os.scandir():
@@ -30,22 +34,33 @@ def Organiser():
     if final_file_format in File_Format_Dictionary:
       directory_path = Path(File_Format_Dictionary[final_file_format])
       full_dir_path = Path("organiser/") / directory_path
-      os.makedirs(full_dir_path, exist_ok=True)
-      os.rename(file_path, full_dir_path / file_path.name)
+      os.makedirs(full_dir_path, exist_ok=True) # create directory if it doesn't exist
+      dest_file_path = full_dir_path / file_path.name
+      if dest_file_path.exists():
+        print(f"File already exists: {dest_file_path}")
+        duplicates.append(file_path) # add duplicate file to list
+        continue
+      os.rename(file_path, dest_file_path)
       continue
     try:
-      os.mkdir("organiser/Other")
+      os.makedirs("organiser/Other", exist_ok=True)
     except Exception as e:
       print(f"Failed to create new directory: {e}")
     os.rename(file_path, os.getcwd() + "/organiser/Other/" + file_path.name)
     
+  DeleteDuplicates(duplicates)
+  
     
+def DeleteDuplicates(duplicates):
+  if duplicates:
+    pass
+  
 
 def Change_Directory():
-  _input = input("(p, l): ")
-  if _input == "p":
+  _input = input("(P, L): ")
+  if _input.lower() == "p":
     os.chdir(r"C:\\Users\D\Desktop")
-  elif _input == "l":
+  elif _input.lower() == "l":
     os.chdir(r"C:\\Users\drodw\Desktop")
   else:  
     print("Please input a correct character")
