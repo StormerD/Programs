@@ -1,0 +1,89 @@
+/* - - - body - - - */
+body {
+  height: 100%;
+  /* - - - - - */
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: rgb(255, 253, 245);
+  font-size: 1.2vw;
+}
+
+/* - - - - - HEADER - - - - - */
+#headerContainer {
+  float: left;
+  width: 100%;
+  margin-left: 0;
+  /* - - - - - */
+  background-color: rgb(213, 184, 207);
+}
+
+#headingBox {
+  float: left;
+  margin-top: 1%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  width: 25%;
+  /* - - - - - */
+
+  border-radius: 20px;
+  background-color: rgb(253, 253, 253);
+}
+
+#heading {
+  float: left;
+  width: 75%;
+  margin-top: 4%;
+  margin-left: 12%;
+  padding-top: 3%;
+  /* - - - - - */
+  text-align: center;
+  border: 15px;
+  font-size: 2.5vw;
+}
+
+nav {
+  float: left;
+  width: 65%;
+  margin-top: 3%;
+  margin-left: 2.5%;
+}
+
+nav>ul {
+  float: left;
+  clear: right;
+  padding: 0;
+  width: 100%;
+  margin-top: 0;
+  margin-left: 0;
+  /* - - - - - */
+  list-style-type: none;
+}
+
+nav>ul>li {
+  width: 100%;
+  /* - - - - - */
+  text-align: center;
+}
+
+.hyperLink {
+  float: left;
+  width: 16%;
+  margin-left: 2.5%;
+  padding: 0.15%;
+  /* - - - - - */
+  color: black;
+  font-weight: bold;
+  background-color: rgb(253, 253, 253);
+  font-size: 2.5vw;
+  text-decoration: underline transparent;
+  border: solid rgb(255, 200, 48);
+  border-radius: 5px;
+  transition: text-decoration 0.25s;
+}
+
+#here {
+  animation-name: fade;
+  animation-duration: 2s;
+  background-color: rgb(247, 235, 169);
+}
