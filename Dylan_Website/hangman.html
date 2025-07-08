@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="styles/hangman.css">
+    <script src="scripts/hangman.js"></script>
+    <script src="scripts/hangman_wordList.js"></script>
 </head>
 <body>
     <header id="headerContainer">
@@ -14,11 +16,23 @@
         <nav>
             <ul>
                 <li>
-                    <a class="hyperLink" href="" id="here">Home</a>
+                    <a class="hyperLink" href="index.html">Home</a>
                     <a class="hyperLink" href="2048.html">2048</a>
+                    <a class="hyperLink" href="" id="here">Hangman</a>
                 </li>
             </ul>
         </nav>
     </header>
+    <div id="leftSection">
+        <h1>Hangman</h1>
+    </div>
+    <div id="middleSection">
+        <div id="startGame">
+            <input type="text" id="wordInput" placeholder="Enter a word">
+            <br>
+            <button id="startButton">Start Game</button>
+        </div>
+    </div>
+    <div id="rightSection"></div>
 </body>
 </html>
