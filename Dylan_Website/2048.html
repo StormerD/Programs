@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2048</title>
-    <link rel="stylesheet" href="styles/2048.css">
-    <script src="scripts/2048.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/2048.css">
 </head>
-
 <body>
-    <header id="headerContainer">
-        <div id="headingBox">
-            <h1 id="heading">2048</h1>
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a class="hyperLink" href="index.html">Home</a>
-                    <a class="hyperLink" href="" id="here">2048</a>
-                    <a class="hyperLink" href="hangman.html">Hangman</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div id="leftSection">
-        <h1>Scoreboard</h1>
+  <header id="headerContainer">
+    <div id="headingBox">
+      <h1 id="title">2048</h1>
     </div>
-    <div id="middleSection">
-        <h2>Score: <span id="score">0</span></h2>
-        <div id="board">
-        </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Homepage</a>
+          <a href="" id="here">2048</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div id="leftSection">
+    <h1>Scoreboard</h1>
+  </div>
+  <div id="middleSection">
+    <h2>Score: <span id="score">0</span></h2>
+    <div id="board">  
+      <!-- Game board will be dynamically generated here -->
     </div>
-    <div id="rightSection">
-        <h1 id="endHeading">Game Over</h1>
-        <button class="button" onclick="newGame()">Play Again</button>
-    </div>
+  </div>
+  <div id="rightSection">
+    <h1 id="endHeading">Game Over</h1>
+    <button class="button" onclick="newGame()">Play Again!</button>
+  </div>
 </body>
-
 </html>
